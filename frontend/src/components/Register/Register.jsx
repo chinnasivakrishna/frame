@@ -56,7 +56,7 @@ const RegisterForm = () => {
       if (validate()) {
     try {
       
-        const response = await axios.post("http://localhost:8001/user/register", data);
+        const response = await axios.post("https://frame-api-five.vercel.app/user/register", data);
         if (response.data.message = "User added Successfull") {
           alert("Registeration Successfull");
         } else {

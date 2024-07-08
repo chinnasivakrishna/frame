@@ -16,7 +16,7 @@ const LoginForm = () => {
     setData({ ...data, [e.target.name]: e.target.value });
 
   };
-
+  axios.defaults.withCredentails = true;
   const login = async() => {
     try {
       const response = await axios.post("https://frame-api-five.vercel.app/user/login", data);

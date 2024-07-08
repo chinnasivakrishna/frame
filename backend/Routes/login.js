@@ -5,7 +5,11 @@ const cors = require("cors")
 const login = express.Router();
 
 const app = express();
-app.use(cors())
+app.use(cors({
+  origin:['https://frame-front-end.vercel.app'],
+  methods:['Post', 'Get'],
+  credentails: true,
+}))
 
 login.route("/login").post(async (req, res) => {
   const { userEmail, userPassword } = req.body;

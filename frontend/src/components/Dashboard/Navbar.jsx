@@ -15,7 +15,7 @@ export default function SimpleSlider() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8001/user/fetch');
+        const response = await axios.get('https://frame-api-five.vercel.app/user/fetch');
         setData(response.data.fetch);
         console.log(response.data.fetch);
       } catch (error) {

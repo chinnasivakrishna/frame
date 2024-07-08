@@ -17,7 +17,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors({
   origin:['https://frame-front-end.vercel.app'],
-  methods:['Post', 'Get'],
+  methods:['POST', 'GET'],
   credentails: true,
 }))
 const DB_URL = process.env.MONGO_URL;

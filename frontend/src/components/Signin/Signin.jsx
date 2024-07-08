@@ -19,7 +19,7 @@ const LoginForm = () => {
   axios.defaults.withCredentails = true;
   const login = async() => {
     try {
-      const response = await axios.post("https://frame-api-five.vercel.app/user/login", data);
+      const response = await axios.post("frame-api-five.vercel.app/user/login", data);
       if (response.data.message === "login successfull") {
         alert("login Successfull");
         navigate("/connect")

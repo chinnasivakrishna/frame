@@ -15,7 +15,11 @@ const cors = require("cors")
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors())
+app.use(cors({
+  origin:['https://frame-front-end.vercel.app/'],
+  methods:['Post', 'Get'],
+  credentails: true,
+}))
 const DB_URL = process.env.MONGO_URL;
 
 mongoose.connect(DB_URL, {
